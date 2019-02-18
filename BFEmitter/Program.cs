@@ -23,7 +23,7 @@ namespace BFEmitter
 
             for (int i = 0; i < code.Length; i++)
             {
-                if (workingOn is CompBeginOp || workingOn is CompEndOp)
+                if (workingOn is CompBeginOp || workingOn is CompEndOp || workingOn is WriteOp || workingOn is ReadOp)
                 {
                     parserTree.Add(workingOn);
                     workingOn = null;
